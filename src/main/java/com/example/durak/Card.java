@@ -9,20 +9,24 @@ public class Card {
         }
     }
 
-    enum Value {
-        Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace;
-        private static final Value[] values = Value.values();
-        public static Value getValue(int i) {
-            return Value.values[i];
+    enum Value{
+        Six(6), Seven(7), Eight(8), Nine(9), Ten(10), Jack(11), Queen(12), King(13), Ace(14);
+        final int value;
+        private Value(int value) {
+            this.value = value;
         }
+        private static final Value[] values = Value.values();
+        public int getRank() { return value; }
     }
 
     private final Suit suit;
     private final Value value;
+    private final int val;
 
     public Card(Suit suit, Value value) {
         this.suit = suit;
         this.value = value;
+        this.val = value.value;
     }
 
     public Suit getSuit() {

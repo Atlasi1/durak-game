@@ -1,24 +1,22 @@
 package com.example.durak;
 
 import java.util.Random;
-import javax.swing.ImageIcon;
+import com.example.durak.Card.Suit;
+import com.example.durak.Card.Value;
 
 public class Deck {
-    private final int CAPACITY = 36;
-    private Card[] cards;
+    private Card[] cards = new Card[36];
     private int sizeOfDeck;
 
     public Deck() {
-        cards = new Card[CAPACITY];
+        reset();
     }
 
     public void reset() {
-        Card.Suit[] suits = Card.Suit.values();
-        Card.Value[] values = Card.Value.values();
         sizeOfDeck = 0;
-        for(int i = 0; i < CAPACITY / 4; i++) {
-            for(int j = 0; j < 4; j++) {
-                cards[sizeOfDeck++] = new Card(suits[j], values[i]);
+        for(Suit s: Suit.values()) {
+            for(Value v: Value.values()) {
+                cards[sizeOfDeck++] = new Card(s, v);
             }
         }
     }
@@ -44,13 +42,6 @@ public class Deck {
             throw new Exception("Невозможно нарисовать карту в пустой колоде");
         }
         return cards[--sizeOfDeck];
-    }
-
-    public ImageIcon drawCardImage() throws Exception {
-        if(isEmpty()) {
-            throw new Exception("Невозможно нарисовать карту в пустой колоде");
-        }
-        return new ImageIcon(cards[--sizeOfDeck].toString() + ".png");
     }
 
     public Card[] drawCard(int n) throws Exception{
