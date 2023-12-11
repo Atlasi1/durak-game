@@ -29,6 +29,8 @@ public class Game {
     }
 
     public void start(Game game) throws Exception {
+        boolean hod = true;
         trumpCard = deck.drawCard();
+
     }
 }
