@@ -11,7 +11,7 @@
       <Button fx:id="btnAction" layoutX="909.0" layoutY="743.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Взять" />
       <Label layoutX="861.0" layoutY="26.0" text="Карт в колоде:" />
       <Label fx:id="sizeDeck" layoutX="953.0" layoutY="26.0" text="0" />
-            <ScrollPane layoutX="14.0" layoutY="598.0" fitToHeight="true" fitToWidth="true" hbarPolicy="ALWAYS" prefHeight="172.0" prefWidth="878.0" vbarPolicy="NEVER">
+            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="ALWAYS" layoutX="14.0" layoutY="598.0" prefHeight="172.0" prefWidth="878.0" vbarPolicy="NEVER">
                <content>
                   <HBox fx:id="hand" prefHeight="172.0" prefWidth="871.0">
                           <children>
@@ -32,5 +32,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
+      <Label fx:id="playerId" layoutX="50.0" layoutY="568.0" prefHeight="18.0" prefWidth="88.0" />
+      <Button fx:id="btnQuit" layoutX="24.0" layoutY="50.0" mnemonicParsing="false" text="Выйти" />
    </children>
 </AnchorPane>

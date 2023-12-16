@@ -6,7 +6,7 @@ public class Player {
     private String name;
     private int id;
     private Hand hand;
-    //TODO: Задать player поле attacker для облегчения задачи
+    private boolean attacker;
 
     public Player(String name, int id) {
         this.name = name;
@@ -32,6 +32,13 @@ public class Player {
 
     public int getId() {
         return id;
+    }
+    public void setAttacker(boolean b) {
+        attacker = b;
+    }
+
+    public boolean isAttacker() {
+        return attacker;
     }
 
     @Override
