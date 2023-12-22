@@ -2,18 +2,20 @@ package com.example.durak_game;
 
 import javafx.scene.image.Image;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Card {
-    enum Suit {
+public class Card implements Serializable {
+    public enum Suit {
         Clubs, Diamonds, Hearts, Spades; // Трефы — clubs Бубны — diamonds Червы — hearts Пики — spades
         private static final Suit[] suits = Suit.values();
+
         public static Suit getSuit(int i) {
             return Suit.suits[i];
         }
     }
 
-    enum Value{
+    public enum Value{
         Six(6), Seven(7), Eight(8), Nine(9), Ten(10), Jack(11), Queen(12), King(13), Ace(14);
         final int value;
         private Value(int value) {
@@ -32,6 +34,12 @@ public class Card {
         this.value = value;
         this.val = value.value;
     }
+    public Card(String val) {
+        String[] data = val.split("_of_");
+        this.suit = Helper.getSuit(data[0]);
+        this.value = Helper.getValue(data[1]);
+        this.val = this.value.value;
+    }
 
     public Suit getSuit() {
         return suit;
@@ -43,7 +51,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return suit + "_" + value;
+        return suit + "_of_" + value;
     }
 
     public Image getImage() {

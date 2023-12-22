@@ -6,10 +6,11 @@ import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Hand {
+public class Hand implements Serializable {
     private ArrayList<Card> cardsInHand;
     private SimpleIntegerProperty size;
 

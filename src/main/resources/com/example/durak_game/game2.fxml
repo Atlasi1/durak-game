@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.durak_game.Game2Controller">
+    <children>
+        <Region prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: green;" />
+        <Button fx:id="btnAction" layoutX="909.0" layoutY="743.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="Взять" />
+        <Label layoutX="861.0" layoutY="26.0" text="Карт в колоде:" />
+        <Label fx:id="sizeDeck" layoutX="953.0" layoutY="26.0" text="23" />
+        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="ALWAYS" layoutX="14.0" layoutY="598.0" prefHeight="172.0" prefWidth="878.0" vbarPolicy="NEVER">
+            <content>
+                <HBox fx:id="hand" prefHeight="172.0" prefWidth="871.0">
+                    <children>
+
+                    </children>
+                </HBox>
+            </content>
+        </ScrollPane>
+        <FlowPane fx:id="table" layoutX="24.0" layoutY="300.0" prefHeight="200.0" prefWidth="951.0" prefWrapLength="900.0" rowValignment="TOP" style="-fx-background-color: rgba(0,0,0,0.3);" />
+        <ImageView fx:id="trumpCardImage" fitHeight="200.0" fitWidth="130.0" layoutX="638.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/6_of_clubs.png" />
+            </image></ImageView>
+        <Label fx:id="labelTrumpCard" layoutX="659.0" layoutY="17.0" text="Козырная карта" />
+      <Label fx:id="labelMove" layoutX="24.0" layoutY="568.0" text="Ваш ход" />
+    </children>
+</AnchorPane>

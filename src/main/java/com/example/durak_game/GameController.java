@@ -59,8 +59,8 @@ public class GameController {
 
     @FXML
     public void initialize() throws Exception {
-        playerOne = new Player("player1", 1);
-        playerTwo = new Player("player2", 2);
+        playerOne = new Player("player1");
+        playerTwo = new Player("player2");
         btnSurr.visibleProperty().bind(game);
         btnQuit.visibleProperty().bind(game.not());
         btnAction.disableProperty().bind(playable.not());

@@ -3,22 +3,22 @@ package com.example.durak_game;
 import java.io.Serializable;
 import java.util.UUID;
 
-public class Player implements Serializable {
+public class Player2 implements Serializable {
     private String name;
     private String id;
-    private Hand hand;
+    private Hand2 hand;
     private boolean attacker;
 
-    public Player(String name, String id) {
+    public Player2(String name, String id) {
         this.name = name;
         this.id = id;
-        hand = new Hand();
+        hand = new Hand2();
     }
 
-    public Player(String name) {
+    public Player2(String name) {
         this.name = name;
         this.id = UUID.randomUUID().toString();
-        hand = new Hand();
+        hand = new Hand2();
     }
 
     public String getName() {
@@ -29,11 +29,11 @@ public class Player implements Serializable {
         this.name = name;
     }
 
-    public Hand getHand() {
+    public Hand2 getHand() {
         return hand;
     }
 
-    public void setHand(Hand hand) {
+    public void setHand(Hand2 hand) {
         this.hand = hand;
     }
 
@@ -50,6 +50,7 @@ public class Player implements Serializable {
 
     @Override
     public String toString() {
-        return this.name + "#" + this.id;
+        return this.name;
     }
 }
+

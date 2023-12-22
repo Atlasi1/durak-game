@@ -1,5 +1,6 @@
 package com.example.durak_game;
 
+import java.io.Serializable;
 import java.util.Random;
 import com.example.durak_game.Card.Suit;
 import com.example.durak_game.Card.Value;
@@ -7,7 +8,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.StringProperty;
 
-public class Deck {
+public class Deck implements Serializable {
     private Card[] cards = new Card[36];
     private int sizeOfDeck;
 
