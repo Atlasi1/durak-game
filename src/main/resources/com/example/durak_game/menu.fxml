@@ -6,18 +6,18 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.durak_game.MenuController">
    <children>
-      <Region prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: green;" />
-      <Button fx:id="btnCreate" layoutX="44.0" layoutY="121.0" mnemonicParsing="false" onAction="#createRoom" text="Создать комнату" />
+      <Region prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #445f44;" />
+      <Button fx:id="btnCreate" layoutX="44.0" layoutY="121.0" mnemonicParsing="false" onAction="#createRoom" style="-fx-background-color: black; -fx-background-radius: 10px;" text="Создать комнату" textFill="#c1c1c1" />
       <Label layoutX="251.0" layoutY="14.0" prefHeight="42.0" prefWidth="97.0" text="Дурак">
          <font>
             <Font name="Arial Bold" size="28.0" />
          </font>
       </Label>
-      <Button fx:id="btnConnect" layoutX="44.0" layoutY="286.0" mnemonicParsing="false" onAction="#connectRoom" text="Войти в комнату" />
+      <Button fx:id="btnConnect" layoutX="44.0" layoutY="286.0" mnemonicParsing="false" onAction="#connectRoom" style="-fx-background-color: black; -fx-background-radius: 10px;" text="Войти в комнату" textFill="WHITE" />
       <TextField fx:id="fieldName" layoutX="411.0" layoutY="56.0" />
       <Label fx:id="labelName" layoutX="335.0" layoutY="60.0" text="Введите имя:" />
       <Label fx:id="labelSessionId" layoutX="307.0" layoutY="147.0" text="Введите session id:" />
       <TextField fx:id="fieldSessionId" layoutX="412.0" layoutY="143.0" />
-      <Button fx:id="btnNext" layoutX="510.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleNext" text="Войти" />
+      <Button fx:id="btnNext" layoutX="487.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="Ok" textFill="WHITE" />
    </children>
 </AnchorPane>

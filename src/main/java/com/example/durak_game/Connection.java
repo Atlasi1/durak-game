@@ -196,10 +196,19 @@ public class Connection implements Runnable {
         String data = "";
         boolean result = checkWinningState();
         System.out.println("конец игры - " + result);
-        String winner_state = result ? "true" : "false";
+        String winner_state = result ? getWinner().getName() : "null";
         System.out.println("отправление данных о конце игры");
         data += result + "," + winner_state;
         return data;
+    }
+
+    private Player2 getWinner() {
+        for(Player2 p: players) {
+            if(p.getHand().getCardsInHand().isEmpty()) {
+                return p;
+            }
+        }
+        return null;
     }
 
     private String getTextAction(int indexPlayer) {
@@ -243,6 +252,9 @@ public class Connection implements Runnable {
             data += getTextAction(i) + "#";
             data += getPermission(i);
             sendData(data, outputs.get(i));
+            if(checkWinningState()) {
+                closeStreams();
+            }
         }
     }
 

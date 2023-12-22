@@ -2,9 +2,13 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.durak_game.EndController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #445f44;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.durak_game.EndController">
    <children>
-      <Label fx:id="labelState" layoutX="264.0" layoutY="191.0" text="Вы победили" />
+      <Label fx:id="labelState" layoutX="214.0" layoutY="182.0" text="Вы победили !">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
    </children>
 </AnchorPane>

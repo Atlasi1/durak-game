@@ -133,8 +133,8 @@ public class Client {
                 boolean endGame = Boolean.parseBoolean(end[0]);
                 if(endGame) {
                     openEnd();
-                    boolean iWin = Boolean.parseBoolean(end[1]);
-                    if(iWin) {
+                    String name = end[1];
+                    if(Objects.equals(name, this.username)) {
                         String ending = "Вы победили";
                         ec.setTextState(ending);
                     }
@@ -164,13 +164,6 @@ public class Client {
                 gc.setDisableActions(isTurn);
                 break;
             }
-//            case "permission": {
-//                // permission#true/false
-//                String bool = params[1];
-//                isTurn = Boolean.getBoolean(bool);
-//                gc.setDisableAction(isTurn);
-//                break;
-//            }
         }
     }
 
